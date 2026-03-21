@@ -1,0 +1,16 @@
+body {
+  background-color: beige;
+}
+
+h1 {
+  color: brown;
+}
+
+h1:first-child {
+  color: blueviolet;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: black;
+}
