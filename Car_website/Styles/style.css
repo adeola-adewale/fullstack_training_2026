@@ -331,3 +331,61 @@ nav {
 }
 
 /* marquee ends here */
+
+/* car model starts here  */
+
+.models {
+  background: var(--carbon);
+  padding: 120px 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 70px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label{
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: 0.05em;
+}
+
+.section-link{
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.section-link:hover {
+  opacity: 1;
+}
+
+/* car model ends here  */
