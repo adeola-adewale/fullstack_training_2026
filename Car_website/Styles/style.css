@@ -1,0 +1,333 @@
+/* resetting the page */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* declaring my colours */
+:root {
+  --cream: #f5f0e8;
+  --ivory: #ede8dc;
+  --dark: #0d0c0a;
+  --carbon: #1a1917;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --rust: #8b3a2a;
+  --muted: #6b6560;
+  --border: rgba(201,168, 76, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background : var(--dark) ;
+  color: var(--cream);
+  /* Use any font family as you deem fit */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  overflow-x: hidden;
+  /* cursor: none; */
+}
+
+/* nav styles starts here */
+
+nav {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 28px 60px;
+  width: 100%;
+  text-decoration: none;
+  /* background-color: var(--muted); */
+}
+
+.nav-links {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.nav-logo {
+  color: var(--gold);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--cream);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.nav-cta {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--dark);
+  background: var(--gold);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+
+.nav-cta:hover {
+  background: #e8c97a;
+}
+
+/* navigation ends here */
+
+/* hero styles starts here */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 0 60px 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(eclipse 80% 60% at 70% 50%, rgba(139, 58, 42, 0.12) 0%, transparent 60%), radial-gradient(eclipse 50% 80% at 80% 20%, rgba(201, 168, 76, 0.06) 0%, transparent 60%), linear-gradient(135deg, #0d0c0a 0%, #1a1917 50%, #0d0c0a);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+
+.hero-car {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65%;
+  animation: jump 6s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-52%) translateX(-8px);
+  }
+}
+
+.hero-car svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 40px 80px rgba(139,58,42,0.3)) drop-shadow(0 0 120px rgba(201,168,76,0.08));
+}
+
+.hero-tag {
+  position: absolute;
+  top: 48px;
+  left: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.hero-eyebrow {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(5rem, 9vw, 10rem);
+  line-height: 0.9;
+  margin-bottom: 30px;
+}
+
+.hero-title em {
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 0.45em;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  padding-left: 4px;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ivory);
+  max-width: 420px;
+  margin-bottom: 48px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.btn-primary {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--gold);
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-light);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translateX(0);
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-secondary {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-secondary:hover {
+  opacity: 1;
+}
+
+.btn-secondary::before {
+  content: '->';
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+
+.hero-stats {
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  display: flex;
+  gap: 48px;
+  z-index: 2;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+  display: block;
+}
+
+/* hero styles ends here */
+
+
+/* marquee starts here */
+
+.marquee-strip {
+  background: var(--gold);
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  color: var(--dark);
+  padding: 0 40px;
+}
+
+.marquee-dot {
+  color: var(--rust);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0);}
+  to { transform: translateX(-50%);}
+}
+
+/* marquee ends here */
