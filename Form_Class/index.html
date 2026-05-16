@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+
+<body>
+
+  <h1>Account Registration Form</h1>
+
+  <form class="form-container">
+
+    <!--  first name, last name, dob, email, gender, phone number, address, ext contact info, account type, id card type, id number, password
+    1. personal details, 2. account information -->
+
+    <!-- Personal Information -->
+    <div class="personal-info-section">
+
+      <input type="text" placeholder="First Name">
+
+      <input type="text" placeholder="Last Name">
+
+      <select>
+        <option value="">Select Gender</option>
+        <option value="FEMALE">Female</option>
+        <option value="MALE">Male</option>
+      </select>
+
+      <input type="tel" placeholder="Phone Number">
+
+      <input type="date" placeholder="Date of Birth">
+
+      <textarea cols="60" rows="3" placeholder="Full Address"></textarea>
+
+    </div>
+
+    <!-- External Contact Information -->
+    <div class="ext-contact-section">
+
+      <input type="text" placeholder="External First Name">
+
+      <input type="text" placeholder="External Last Name">
+
+      <input type="tel" placeholder="External Phone Number">
+
+      <input type="email" placeholder="External Email">
+
+    </div>
+
+    <!-- Account Information -->
+    <div class="account-section">
+
+      <div>
+        <label>Account Type</label>
+
+        <select>
+          <option value="1">Savings</option>
+          <option value="2">Current</option>
+          <option value="3">Domiciliary</option>
+        </select>
+      </div>
+
+      <div>
+        <label>ID Type</label>
+
+        <select>
+          <option value="1">Voter's Card</option>
+          <option value="2">Driver's License</option>
+          <option value="3">International Passport</option>
+          <option value="4">Others</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Password Section -->
+    <div class="password-section">
+
+      <input type="password" placeholder="Password">
+
+      <input type="password" placeholder="Re-enter Password">
+
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Register Account</button>
+
+  </form>
+
+</body>
+
+</html>
