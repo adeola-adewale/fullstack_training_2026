@@ -1,0 +1,66 @@
+html {
+  background-color: gray;
+  /* text-align: center; */
+}
+
+
+.yellow {
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+}
+
+.blue {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.black {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+.red {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+
+.desktop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+
+
+/* phone mobile design starts here */
+@media (max-width: 600px) {
+
+  html {
+    background-color: whitesmoke;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+
+}

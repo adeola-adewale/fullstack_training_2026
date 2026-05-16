@@ -1,0 +1,81 @@
+*, *::before , *::after  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: x-large;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-column: 1;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 2px;
+  padding: 10px;
+  /* height: 50dvh; */
+}
+
+.card-image {
+  height: 300px;
+  object-fit: cover;  /* contain, fit */
+  border-radius: 20px 20px 0px 0px;
+
+}
+
+.card-description {
+  color: white;
+  padding: 10px;
+  background-color: #09818e;
+  line-height: 1.5rem;
+  /* border-top-color: white; */
+  border-top: 1px solid white;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  margin-bottom: .1em;
+}
+
+.card-title {
+  font-style: italic;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: .4em;
+}
+
+.card-bio {
+  text-align: justify;
+}
+
+@media (width > 600px) and (width < 1025px) {
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card-image {
+    height: 350px;
+    object-fit: contain;  /* contain, fit */
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  .card-description {
+    border-left: 1.5px solid white;
+  }
+
+
+
+
+}
