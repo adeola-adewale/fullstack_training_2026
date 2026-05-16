@@ -1,4 +1,4 @@
-*, *::before , *::after  {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,23 +15,20 @@ h1 {
 
 .card-grid {
   display: grid;
-  grid-column: 1;
+  gap: 20px;
 }
 
 .card {
   display: flex;
   width: 100%;
   flex-direction: column;
-  border: 2px;
   padding: 10px;
-  /* height: 50dvh; */
 }
 
 .card-image {
   height: 300px;
-  object-fit: cover;  /* contain, fit */
+  object-fit: cover;
   border-radius: 20px 20px 0px 0px;
-
 }
 
 .card-description {
@@ -39,7 +36,6 @@ h1 {
   padding: 10px;
   background-color: #09818e;
   line-height: 1.5rem;
-  /* border-top-color: white; */
   border-top: 1px solid white;
 }
 
@@ -59,6 +55,9 @@ h1 {
   text-align: justify;
 }
 
+/* ===================== */
+/* TABLET DESIGN */
+/* ===================== */
 @media (width > 600px) and (width < 1025px) {
 
   .card {
@@ -66,16 +65,37 @@ h1 {
   }
 
   .card-image {
+    width: 50%;
     height: 350px;
-    object-fit: contain;  /* contain, fit */
+    object-fit: cover;
     border-radius: 20px 0px 0px 20px;
   }
 
   .card-description {
+    width: 50%;
     border-left: 1.5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* ===================== */
+/* DESKTOP DESIGN */
+/* ===================== */
+@media (width >= 1025px) {
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
+  .card {
+    flex-direction: column;
+  }
 
-
-
+  .card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
 }
