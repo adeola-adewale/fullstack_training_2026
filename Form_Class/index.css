@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* to prevent text selection on double click */
+  user-select: none;
 }
 
 body {
@@ -93,6 +95,14 @@ button:hover {
     grid-column: span 2;
   }
 
+}
+
+/* Fix for section headers in grid layout */
+.personal-info-section > label,
+.ext-contact-section > label,
+.account-section > label,
+.password-section > label {
+  grid-column: 1 / -1;
 }
 
 /* Desktop Design */

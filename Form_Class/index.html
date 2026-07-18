@@ -11,7 +11,7 @@
 
   <h1>Account Registration Form</h1>
 
-  <form class="form-container">
+  <form class="form-container" id="registrationForm"> 
 
     <!--  first name, last name, dob, email, gender, phone number, address, ext contact info, account type, id card type, id number, password
     1. personal details, 2. account information -->
@@ -19,34 +19,38 @@
     <!-- Personal Information -->
     <div class="personal-info-section">
 
-      <input type="text" placeholder="First Name">
+      <label>Personal Information</label>
 
-      <input type="text" placeholder="Last Name">
+      <input type="text" placeholder="First Name" id="firstName">
 
-      <select>
+      <input type="text" placeholder="Last Name" id="lastName">
+
+      <select id="gender">
         <option value="">Select Gender</option>
         <option value="FEMALE">Female</option>
         <option value="MALE">Male</option>
       </select>
 
-      <input type="tel" placeholder="Phone Number">
+      <input type="tel" placeholder="Phone Number" id="phoneNumber">
 
-      <input type="date" placeholder="Date of Birth">
+      <input type="date" placeholder="Date of Birth" id="dateOfBirth">
 
-      <textarea cols="60" rows="3" placeholder="Full Address"></textarea>
+      <textarea cols="60" rows="3" placeholder="Full Address" id="address"></textarea>
 
     </div>
 
     <!-- External Contact Information -->
     <div class="ext-contact-section">
 
-      <input type="text" placeholder="External First Name">
+      <label>External Contact Information</label>
 
-      <input type="text" placeholder="External Last Name">
+      <input type="text" placeholder="External First Name" id="externalFirstName">
 
-      <input type="tel" placeholder="External Phone Number">
+      <input type="text" placeholder="External Last Name" id="externalLastName">
 
-      <input type="email" placeholder="External Email">
+      <input type="tel" placeholder="External Phone Number" id="externalPhoneNumber">
+
+      <input type="email" placeholder="External Email" id="externalEmail">
 
     </div>
 
@@ -56,7 +60,7 @@
       <div>
         <label>Account Type</label>
 
-        <select>
+        <select id="accountType">
           <option value="1">Savings</option>
           <option value="2">Current</option>
           <option value="3">Domiciliary</option>
@@ -66,7 +70,7 @@
       <div>
         <label>ID Type</label>
 
-        <select>
+        <select id="idType">
           <option value="1">Voter's Card</option>
           <option value="2">Driver's License</option>
           <option value="3">International Passport</option>
@@ -79,9 +83,9 @@
     <!-- Password Section -->
     <div class="password-section">
 
-      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Password" id="password">
 
-      <input type="password" placeholder="Re-enter Password">
+      <input type="password" placeholder="Re-enter Password" id="confirmPassword">
 
     </div>
 
@@ -89,7 +93,15 @@
     <button type="submit">Register Account</button>
 
   </form>
+  
+  <!-- Container to display saved form records dynamically via JavaScript -->
 
+  <div id="output" class="output-section"></div>
+
+
+  <!-- Linked External JavaScript File right before body closes -->
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
